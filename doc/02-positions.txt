@@ -1,0 +1,38 @@
+Positions
+
+The grid
+
+For all elements, SVG uses a coordinate system or grid system similar to the one used by canvas 
+(and by a whole lot of other computer drawing routines). That is, the top left corner of the document 
+is considered to be the point (0,0), or point of origin. Positions are then measured in pixels from 
+the top left corner, with the positive x direction being to the right, and the positive y direction 
+being to the bottom.
+
+           0
+         0 ---------------------------------> x
+           |          ^
+           |        y |
+           |    x     v
+           |<-------->--------------
+           |          |            |
+           |          |            |
+           |          |            | height
+           |          |            |  
+           |          --------------
+           |             width
+           |
+           v
+
+<svg width="200" height="200" viewBox="0 0 100 100">…</svg>
+             ^            ^            ^        ^
+             |____________|            |________|
+                   |                        |
+              whole canvas          portion of canvas 
+                                       to display
+                                     in whole canvas
+                                     (to scale it)  
+
+
+[...] suppose that the user agent can determine from its environment that "1px" corresponds 
+to "0.2822222mm" (i.e., 90dpi). Then, for all processing of SVG content: [...] "1cm" equals 
+"35.43307px" (and therefore 35.43307 user units)
