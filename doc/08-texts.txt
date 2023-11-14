@@ -1,0 +1,57 @@
+Texts
+
+Basics
+
+<text x="10" y="10">Hello World!</text>
+
+============================================================
+Setting font properties
+
+An essential part of a text is the font in which it is displayed. SVG offers a set of attributes, 
+many similar to their CSS counterparts, to enable font selection. Each of the following 
+properties can be set as an attribute or via a CSS declaration: font-family, font-style, 
+font-weight, font-variant, font-stretch, font-size, font-size-adjust, kerning, letter-spacing, 
+word-spacing and text-decoration.
+
+============================================================
+Other text-related elements
+
+This element is used to mark up sub-portions of a larger text. It must be a child of a text element 
+or another tspan element. A typical use case is to paint one word of a sentence bold red.
+
+<svg width="350" height="60" xmlns="http://www.w3.org/2000/svg">
+  <text>
+    This is
+    <tspan font-weight="bold" fill="red">bold and red</tspan>
+  </text>
+
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: hanging;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
+</svg>
+
+============================================================
+textPath
+
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
+  <text>
+    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" href="#my_path">
+      A curve.
+    </textPath>
+  </text>
+
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: hanging;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
+</svg>
